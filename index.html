@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
+    <style>
+        html {
+            color: var(--tg-them-text_color);
+        }
+    </style>
 </head>
 <body>
     <dif id="test"></dif>
@@ -11,7 +16,7 @@
 
     <script>
         let tg = window.Telegram.WebApp;
-        document.getElementById('test').innerText = tg.initDataUnsafe.user.id
+        document.getElementById('test').innerText = tg.initDataUnsafe.user.id;
     </script>
 </body>
 </html>
