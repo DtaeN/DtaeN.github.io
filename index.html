@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>test</title>
-    <style>
-        body {
-            color: wheat;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test</title>
 </head>
 <body>
-    <dif id="test"></dif>
-
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-    <script>
-        let tg = window.Telegram.WebApp;
-        document.getElementById('test').innerText = tg.initDataUnsafe.user.id;
-    </script>
+	<div id='nam'></div>
+	<button onclick="test()">нажми на меня</button>
+	<script src="js/main.js"></script>
 </body>
 </html>
