@@ -1,0 +1,70 @@
+.header {
+    &-container {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 1400px) {
+            justify-content: space-around;
+        }
+    }
+    &__phone {
+        font-size: 25px;
+        line-height: 24px;
+        text-decoration: none;
+        color: black;
+        font-family: "Inter Bold";
+        background-color: white;
+        border-radius: 35px;
+        padding: 6px;
+        @media (max-width: 1400px) {
+            font-size: 20px;
+            padding: 3px;
+        }
+        @media (max-width: 768px) {
+            font-size: 17px;
+            padding: 2px;
+        }
+    }
+    &__logo {
+        width: 500px;
+        transition: all 365ms ease 0s;
+        &:hover {
+            transform: scale(1.03);
+        }
+        @media (max-width: 1400px) {
+            width: 350px;
+        }
+        @media (max-width: 1220px) {
+            width: 300px;
+        }
+        @media (max-width: 768px) {
+            width: 250px;
+        }
+        @media (max-width: 550px) {
+            position: absolute;
+            top: 35px;
+        }
+    }
+    &__cart {
+        img {
+            width: 80px;
+            height: 80px;
+            filter: invert(1);
+            @media (max-width: 1400px) {
+                width: 60px;
+                height: 60px;
+            }
+            @media (max-width: 1220px) {
+                width: 147px;
+                height: 50px;
+            }
+            @media (max-width: 768px) {
+                width: 100px;
+            }
+            @media (max-width: 550px) {
+                width: 80px;
+            }
+        }
+    }
+}

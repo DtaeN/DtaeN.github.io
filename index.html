@@ -1,13 +1,376 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papino Club</title>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-	<div id='nam'></div>
-	<button onclick="test()">нажми на меня</button>
-	<script src="js/main.js"></script>
+    <header class="header">
+        <div class="container header-container">
+            <a href="tel:89942227772" class="header__phone">89942227772</a>
+            <img src="./public/logo.svg" alt="logo" class="header__logo">
+            <a href="#" class="header__cart">
+                <img src="./public/cart.svg" alt="cart">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="shawarma">
+            <div class="container shawarma-container">
+                <h2 class="shawarma__title">Шаурма</h2>
+                <div class="shawarma-block">
+                    <img src="./public/webp/shawarma.webp" alt="shawarma" class="shawarma-block__image">
+                    <div class="shawarma-block-wrapper">
+                        <div class="shawarma-block-information">
+                            <div class="shawarma-block-information__item">
+                                <div class="shawarma-block-information__name">Шаурма куриная большая</div>
+                                <div class="shawarma-block-information__price">230₽</div>
+                                <p class="shawarma-block-information__description">Свежие помидоры, огурцы, капуста с петрушкой и укропом<br> корейская морковь, картофель фри, мясо, фирменный<br> белый соус. Подается в лаваше или булочке</p>
+                                <button class="shawarma-block-information__button button-add" id="buy_1"
+                                onclick="buy(1)">В корзину!</button>
+                                <div class="sup_block">
+                                    <div class="sup" id="sup_1">
+                                        <button class="minutes_but" id="minutes_1"
+                                        onclick="minutes(1)">-</button>
+                                        <span class="counter" id="counter_1"></span>
+                                        <button class="plus_but" id="plus_1"
+                                        onclick="plus(1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shawarma-block-information">
+                            <div class="shawarma-block-information__item">
+                                <div class="shawarma-block-information__name">Шаурма куриная средняя</div>
+                                <div class="shawarma-block-information__price">200₽</div>
+                                <p class="shawarma-block-information__description">Свежие помидоры, огурцы, капуста с петрушкой и укропом<br> корейская морковь, картофель фри, мясо, фирменный<br> белый соус. Подается в лаваше или булочке</p>
+                                <button class="shawarma-block-information__button button-add" id="buy_2"
+                                onclick="buy(2)">В корзину!</button>
+                                <div class="sup" id="sup_2">
+                                    <button class="minutes_but" id="minutes_2"
+                                    onclick="minutes(2)">-</button>
+                                    <span class="counter" id="counter_2"></span>
+                                    <button class="plus_but" id="plus_2"
+                                    onclick="plus(2)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shawarma-block-information">
+                            <div class="shawarma-block-information__item">
+                                <div class="shawarma-block-information__name">Шаурма куриная маленькая</div>
+                                <div class="shawarma-block-information__price">170₽</div>
+                                <p class="shawarma-block-information__description">Свежие помидоры, огурцы, капуста с петрушкой и укропом<br> корейская морковь, картофель фри, мясо, фирменный<br> белый соус. Подается в лаваше или булочке</p>
+                                <button class="shawarma-block-information__button button-add" id="buy_3"
+                                onclick="buy(3)">В корзину!</button>
+                                <div class="sup" id="sup_3">
+                                    <button class="minutes_but" id="minutes_3"
+                                    onclick="minutes(3)">-</button>
+                                    <span class="counter" id="counter_3"></span>
+                                    <button class="plus_but" id="plus_3"
+                                    onclick="plus(3)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fajitos">
+            <div class="container fajitos-container">
+                <h2 class="fajitos__title">Фахитос</h2>
+                <div class="fajitos-block">
+                    <div class="fajitos-block-information__item">
+                        <div class="fajitos-block-information__name">Фахитос куриный</div>
+                        <div class="fajitos-block-information__price">260₽</div>
+                        <p class="fajitos-block-information__description">Мясо, фирменный белый соус, маслины,<br> оливки, кукуруза. Подается в лаваше или<br> булочке</p>
+                        <button class="fajitos-block-information__button button-add" id="buy_4"
+                        onclick="buy(4)">В корзину!</button>
+                        <div class="sup" id="sup_4">
+                            <button class="minutes_but" id="minutes_4"
+                            onclick="minutes(4)">-</button>
+                            <span class="counter" id="counter_4"></span>
+                            <button class="plus_but" id="plus_4"
+                            onclick="plus(4)">+</button>
+                        </div>
+                    </div> 
+                    <img src="./public/webp/fajitos.webp" alt="fajitos" class="fajitos-block__image">
+                </div>
+            </div>
+        </section>
+        <section class="hotdog">
+            <div class="container hotdog-container">
+                <h2 class="hotdog__title">Хот Дог</h2>
+                <div class="hotdog-block">
+                    <img src="./public/webp/hotdog.webp" alt="hotdog" class="hotdog-block__image">
+                    <div class="hotdog-block-information__item">
+                        <div class="hotdog-block-information__name">Хот Дог</div>
+                        <div class="hotdog-block-information__price">150₽</div>
+                        <p class="hotdog-block-information__description">Булочка, “датская” сосиска, два соуса на выбор:<br> томатный, горчичный, майонезный
+                        </p>
+                        <button class="hotdog-block-information__button button-add" id="buy_5"
+                        onclick="buy(5)">В корзину!</button>
+                        <div class="sup" id="sup_5">
+                            <button class="minutes_but" id="minutes_5"
+                            onclick="minutes(5)">-</button>
+                            <span class="counter" id="counter_5"></span>
+                            <button class="plus_but" id="plus_5"
+                            onclick="plus(5)">+</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <section class="snacks">
+            <div class="container snacks-container">
+                <h2 class="snacks__title">Снэки</h2>
+                <div class="snacks-blocks">
+                    <div class="snacks-block">
+                        <div class="snacks-block__item">
+                            <div class="snacks-block__information">Картошка фри большая</div>
+                            <div class="snacks-block-wrapper">
+                                <div class="snacks-block-wrapper__price">100₽</div>
+                                <button class="snacks-block-wrapper__button button-add" id="buy_6"
+                                onclick="buy(6)">В корзину!</button>
+                                <div class="sup" id="sup_6">
+                                    <button class="minutes_but" id="minutes_6"
+                                    onclick="minutes(6)">-</button>
+                                    <span class="counter" id="counter_6"></span>
+                                    <button class="plus_but" id="plus_6"
+                                    onclick="plus(6)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="snacks-block__item">
+                            <div class="snacks-block__information">Картошка фри маленькая</div>
+                            <div class="snacks-block-wrapper">
+                                <div class="snacks-block-wrapper__price">70₽</div>
+                                <button class="snacks-block-wrapper__button button-add" id="buy_7"
+                                onclick="buy(7)">В корзину!</button>
+                                <div class="sup" id="sup_7">
+                                    <button class="minutes_but" id="minutes_7"
+                                    onclick="minutes(7)">-</button>
+                                    <span class="counter" id="counter_7"></span>
+                                    <button class="plus_but" id="plus_7"
+                                    onclick="plus(7)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="snacks-block__item">
+                            <div class="snacks-block__information">Наггетсы (6 штук)</div>
+                            <div class="snacks-block-wrapper">
+                                <div class="snacks-block-wrapper__price">70₽</div>
+                                <button class="snacks-block-wrapper__button button-add" id="buy_8"
+                                onclick="buy(8)">В корзину!</button>
+                                <div class="sup" id="sup_8">
+                                    <button class="minutes_but" id="minutes_8"
+                                    onclick="minutes(8)">-</button>
+                                    <span class="counter" id="counter_8"></span>
+                                    <button class="plus_but" id="plus_8"
+                                    onclick="plus(8)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="snacks-block__item">
+                            <div class="snacks-block__information">Наггетсы (9 штук)</div>
+                            <div class="snacks-block-wrapper">
+                                <div class="snacks-block-wrapper__price">120₽</div>
+                                <button class="snacks-block-wrapper__button button-add" id="buy_9"
+                                onclick="buy(9)">В корзину!</button>
+                                <div class="sup" id="sup_9">
+                                    <button class="minutes_but" id="minutes_9"
+                                    onclick="minutes(9)">-</button>
+                                    <span class="counter" id="counter_9"></span>
+                                    <button class="plus_but" id="plus_9"
+                                    onclick="plus(9)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./public/webp/snacks.webp" alt="snacks" class="snacks-blocks__image">
+                </div>
+            </div>
+        </section>
+        <section class="combo">
+            <div class="container combo-container">
+                <h2 class="combo__title">Студенческое комбо</h2>
+                <div class="combo-block">
+                    <img src="./public/webp/combo.webp" alt="combo" class="combo__image">
+                    <div class="combo-wrapper">
+                        <div class="combo-wrapper__name">Шаурма + Фри + Кола</div>
+                        <div class="combo-wrapper__price">320₽</div>
+                        <button class="combo-wrapper__button button-add" id="buy_10"
+                        onclick="buy(10)">В корзину!</button>
+                        <div class="sup" id="sup_10">
+                            <button class="minutes_but" id="minutes_10"
+                            onclick="minutes(10)">-</button>
+                            <span class="counter" id="counter_10"></span>
+                            <button class="plus_but" id="plus_10"
+                            onclick="plus(10)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="drinks">
+            <div class="container drinks-container">
+                <h2 class="drinks__title">Напитки</h2>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Добрый <span>банка</span></h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">70₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_11"
+                        onclick="buy(11)">В корзину!</button>
+                        <div class="sup" id="sup_11">
+                            <button class="minutes_but" id="minutes_11"
+                            onclick="minutes(11)">-</button>
+                            <span class="counter" id="counter_11"></span>
+                            <button class="plus_but" id="plus_11"
+                            onclick="plus(11)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Добрый <span>бутылка</span></h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">85₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_12"
+                        onclick="buy(12)">В корзину!</button>
+                        <div class="sup" id="sup_12">
+                            <button class="minutes_but" id="minutes_12"
+                            onclick="minutes(12)">-</button>
+                            <span class="counter" id="counter_12"></span>
+                            <button class="plus_but" id="plus_12"
+                            onclick="plus(12)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Rich Tea</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">85₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_13"
+                        onclick="buy(13)">В корзину!</button>
+                        <div class="sup" id="sup_13">
+                            <button class="minutes_but" id="minutes_13"
+                            onclick="minutes(13)">-</button>
+                            <span class="counter" id="counter_13"></span>
+                            <button class="plus_but" id="plus_13"
+                            onclick="plus(13)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Rich bitter</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">80₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_14"
+                        onclick="buy(14)">В корзину!</button>
+                        <div class="sup" id="sup_14">
+                            <button class="minutes_but" id="minutes_14"
+                            onclick="minutes(14)">-</button>
+                            <span class="counter" id="counter_14"></span>
+                            <button class="plus_but" id="plus_14"
+                            onclick="plus(14)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Bon aqua</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">60₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_15"
+                        onclick="buy(15)">В корзину!</button>
+                        <div class="sup" id="sup_15">
+                            <button class="minutes_but" id="minutes_15"
+                            onclick="minutes(15)">-</button>
+                            <span class="counter" id="counter_15"></span>
+                            <button class="plus_but" id="plus_15"
+                            onclick="plus(15)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Palpy</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">85₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_16"
+                        onclick="buy(16)">В корзину!</button>
+                        <div class="sup" id="sup_16">
+                            <button class="minutes_but" id="minutes_16"
+                            onclick="minutes(16)">-</button>
+                            <span class="counter" id="counter_16"></span>
+                            <button class="plus_but" id="plus_16"
+                            onclick="plus(16)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Tornado</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">120₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_17"
+                        onclick="buy(17)">В корзину!</button>
+                        <div class="sup" id="sup_17">
+                            <button class="minutes_but" id="minutes_17"
+                            onclick="minutes(17)">-</button>
+                            <span class="counter" id="counter_17"></span>
+                            <button class="plus_but" id="plus_17"
+                            onclick="plus(17)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Flash</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">100₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_18"
+                        onclick="buy(18)">В корзину!</button>
+                        <div class="sup" id="sup_18">
+                            <button class="minutes_but" id="minutes_18"
+                            onclick="minutes(18)">-</button>
+                            <span class="counter" id="counter_18"></span>
+                            <button class="plus_but" id="plus_18"
+                            onclick="plus(18)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Burn</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">120₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_19"
+                        onclick="buy(19)">В корзину!</button>
+                        <div class="sup" id="sup_19">
+                            <button class="minutes_but" id="minutes_19"
+                            onclick="minutes(19)">-</button>
+                            <span class="counter" id="counter_19"></span>
+                            <button class="plus_but" id="plus_19"
+                            onclick="plus(19)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-wrapper">
+                    <h3 class="drinks-wrapper__name">Adrenaline</h3>
+                    <div class="drinks-wrapper-information">
+                        <div class="drinks-wrapper-information__price">150₽</div>
+                        <button class="drinks-wrapper-information__button button-add" id="buy_20"
+                        onclick="buy(20)">В корзину!</button>
+                        <div class="sup" id="sup_20">
+                            <button class="minutes_but" id="minutes_20"
+                            onclick="minutes(20)">-</button>
+                            <span class="counter" id="counter_20"></span>
+                            <button class="plus_but" id="plus_20"
+                            onclick="plus(20)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>

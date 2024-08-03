@@ -1,0 +1,114 @@
+.shawarma {
+    &-container {
+        margin-top: 70px;
+    }
+    &__title {
+        font-family: "Inter Bold";
+        font-size: 45px;
+        text-align: center;
+        color: white;
+        margin: 0;
+        @media (max-width: 1400px) {
+            font-size: 35px;
+        }
+        @media (max-width: 1220px) {
+            font-size: 30px;
+        }
+        @media (max-width: 650px) {
+            font-size: 25px;
+        }
+    }
+    &-block {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1400px) {
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        @media (max-width: 1150px) {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        @media (max-width: 550px) {
+            padding: 0px 10px;
+        }
+        &__image {
+            width: 630px;
+            height: 630px;
+            @media (max-width: 1400px) {
+                width: 530px;
+                height: 530px;
+            }
+            @media (max-width: 1220px) {
+                width: 450px;
+                height: 450px;
+            }
+            @media (max-width: 1150px) {
+                width: 350px;
+                height: 350px;
+                border-radius: 50%;
+            }
+            @media (max-width: 540px) {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        &-information {
+            @media (max-width: 1150px) {
+                text-align: center;
+                &:first-child {
+                    margin-top: 20px;
+                }
+            }
+            &__name {
+                font-size: 35px;
+                font-family: "Inter Bold";
+                color: white;
+                @media (max-width: 1400px) {
+                    font-size: 25px;
+                }
+                @media (max-width: 1220px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 650px) {
+                    font-size: 18px;
+                }
+            }
+            &__price {
+                font-size: 30px;
+                font-family: "Inter Bold";
+                color: white;
+                margin-top: 5px;
+                @media (max-width: 1400px) {
+                    font-size: 25px;
+                }
+                @media (max-width: 1220px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 650px) {
+                    font-size: 18px;
+                }
+            }
+            &__description {
+                font-size: 20px;
+                font-family: "Inter Bold";
+                color: white;
+                margin: 0;
+                margin-top: 10px;
+                @media (max-width: 650px) {
+                    font-size: 15px;
+                }
+            }
+            &__button {
+                margin-top: 15px;
+            }
+            &:nth-child(2) {
+                margin-top: 15px;   
+            }
+            &:last-child {
+                margin-top: 15px;
+            }
+        }
+    }
+}
