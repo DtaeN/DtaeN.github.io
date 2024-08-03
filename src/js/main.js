@@ -2,10 +2,10 @@ let tg = window.Telegram.WabApp;
 
 let dishes = {};
 
-tg.expand();
+// tg.expand();
 tg.MainButton.setText("купить");
-tg.MainButton.show();
 tg.MainButton.enable();
+tg.MainButton.show();
 
 
 function buy (id) {
@@ -15,7 +15,7 @@ function buy (id) {
 	dishes[id] = 1;
 	console.log(dishes);
 	document.getElementById(`counter_${id}`).innerHTML = dishes[id];
-	// tg.MainButton.show();
+	tg.MainButton.show();
 }
 
 
@@ -36,6 +36,7 @@ function minutes (id) {
 		document.getElementById(`counter_${id}`).innerHTML = dishes[id];
 	}
 	console.log(dishes);
+	tg.MainButton.hide();
 }
 
 
