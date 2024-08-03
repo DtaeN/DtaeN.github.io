@@ -13,7 +13,7 @@ function buy (id) {
 	dishes[id] = 1;
 	console.log(dishes);
 	document.getElementById(`counter_${id}`).innerHTML = dishes[id];
-	tg.MainButton.show()
+	tg.MainButton.show();
 }
 
 
