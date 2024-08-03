@@ -3,6 +3,7 @@ let tg = window.Telegram.WabApp;
 let dishes = {};
 
 tg.expand();
+tg.MainButton.setText("купить");
 
 
 function buy (id) {
