@@ -40,6 +40,7 @@ function minutes (id) {
 }
 
 
-Telegram.WabApp.onEvent("mainButtonClicked", function(){
+ mainBtnClicked: function(){
 	Telegram.WebApp.sendData(JSON.stringify(dishes));
-})
+	console.log("!!!");
+}
