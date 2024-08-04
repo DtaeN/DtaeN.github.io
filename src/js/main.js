@@ -3,9 +3,8 @@ let tg = window.Telegram.WabApp;
 let dishes = {};
 
 Telegram.WebApp.expand();
-// tg.WebApp.MainButton.setText("купить");
-// tg.WebApp.MainButton.enable();
-// tg.WebApp.MainButton.show();
+Telegram.WebApp.MainButton.setText("Заказать");
+Telegram.WebApp.MainButton.color = #12f00d;
 
 
 function buy (id) {
