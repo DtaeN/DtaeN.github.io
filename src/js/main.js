@@ -2,7 +2,7 @@ let tg = window.Telegram.WabApp;
 
 let dishes = {};
 
-tg.WebApp.expand();
+Telegram.WebApp.expand();
 // tg.WebApp.MainButton.setText("купить");
 // tg.WebApp.MainButton.enable();
 // tg.WebApp.MainButton.show();
@@ -15,7 +15,7 @@ function buy (id) {
 	dishes[id] = 1;
 	console.log(dishes);
 	document.getElementById(`counter_${id}`).innerHTML = dishes[id];
-	tg.WebApp.MainButton.show();
+	Telegram.WebApp.MainButton.show();
 }
 
 
@@ -36,10 +36,10 @@ function minutes (id) {
 		document.getElementById(`counter_${id}`).innerHTML = dishes[id];
 	}
 	console.log(dishes);
-	tg.WebApp.MainButton.hide();
+	Telegram.WebApp.MainButton.hide();
 }
 
 
 Telegram.WabApp.onEvent("mainButtonClicked", function(){
-	tg.sendData(JSON.stringify(dishes));
+	Telegram.WebApp.sendData(JSON.stringify(dishes));
 })
