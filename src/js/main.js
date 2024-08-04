@@ -4,7 +4,7 @@ let dishes = {};
 
 Telegram.WebApp.expand();
 Telegram.WebApp.MainButton.setText("Заказать");
-Telegram.WebApp.MainButton.color = #12f00d;
+Telegram.WebApp.MainButton.color = "#12f00d";
 
 
 function buy (id) {
