@@ -35,7 +35,6 @@ function minutes (id) {
 		document.getElementById(`counter_${id}`).innerHTML = dishes[id];
 	}
 	console.log(dishes);
-	Telegram.WebApp.MainButton.hide();
 }
 
 
