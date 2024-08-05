@@ -39,6 +39,7 @@ function minutes (id) {
 
 
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
-	Telegram.WebApp.sendData(JSON.stringify(dishes));
 	console.log("!!!");
+	Telegram.WebApp.sendData(JSON.stringify(dishes));
+	window.Telegram.WebApp.close();
 });
