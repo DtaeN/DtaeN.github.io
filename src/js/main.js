@@ -8,23 +8,24 @@ Telegram.WebApp.MainButton.color = "#12f00d";
 
 function sendDataToTelegram(data) {
   // Формируем URL с данными
-  const url = `https://t.me/experiment666_bot?start=send_data_${data}`;
-  console.log(url);
+  const url = new URL('https://t.me/experiment666_bot');
+  url.searchParams.set('start', `send_data_${data}`);
 
-  // Отправляем данные в Telegram бот
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error ${response.status}`);
-      }
-      return response.text();
-    })
-    .then(data => {
-      console.log('Данные успешно отправлены в Telegram бот:', data);
-    })
-    .catch(error => {
-      console.error('Ошибка при отправке данных в Telegram бот:', error);
-    });
+  // Создаем HTTP-запрос
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', url.toString(), true);
+
+  // Обрабатываем ответ
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log('Данные успешно отправлены в Telegram бот');
+    } else {
+      console.error('Ошибка при отправке данных в Telegram бот:', xhr.status);
+    }
+  };
+
+  // Отправляем запрос
+  xhr.send();
 }
 
 function buy (id) {
