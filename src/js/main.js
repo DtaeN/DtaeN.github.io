@@ -9,7 +9,8 @@ Telegram.WebApp.MainButton.color = "#12f00d";
 function sendDataToTelegram(data) {
   // Формируем URL с данными
   const url = `https://t.me/your_bot_name?start=send_data_${data}`;
-
+  console.log(url);
+  
   // Отправляем данные в Telegram бот
   fetch(url)
     .then(response => {
