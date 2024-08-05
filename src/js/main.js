@@ -6,6 +6,25 @@ Telegram.WebApp.expand();
 Telegram.WebApp.MainButton.setText("Заказать");
 Telegram.WebApp.MainButton.color = "#12f00d";
 
+function sendDataToTelegram(data) {
+  // Формируем URL с данными
+  const url = `https://t.me/your_bot_name?start=send_data_${data}`;
+
+  // Отправляем данные в Telegram бот
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(data => {
+      console.log('Данные успешно отправлены в Telegram бот:', data);
+    })
+    .catch(error => {
+      console.error('Ошибка при отправке данных в Telegram бот:', error);
+    });
+}
 
 function buy (id) {
 	document.getElementById(`buy_${id}`).style.display = 'none';
@@ -40,6 +59,7 @@ function minutes (id) {
 
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
 	console.log("!!!");
-	Telegram.WebApp.sendData(JSON.stringify(dishes));
+	sendDataToTelegram("!!!");
+	// Telegram.WebApp.sendData(JSON.stringify(dishes));
 	Telegram.WebApp.close();
 });
