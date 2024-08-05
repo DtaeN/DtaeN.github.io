@@ -62,5 +62,5 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
 	console.log("!!!");
 	sendDataToTelegram("!!!");
 	// Telegram.WebApp.sendData(JSON.stringify(dishes));
-	Telegram.WebApp.close();
+	// Telegram.WebApp.close();
 });
