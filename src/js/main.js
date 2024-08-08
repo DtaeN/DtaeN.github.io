@@ -10,28 +10,28 @@ function buy (id) {
 	document.getElementById(`buy_${id}`).style.display = 'none';
 	document.getElementById(`sup_${id}`).style.display = 'flex';
 
-	dishes[Number(id)] = 1;
+	dishes[+id] = 1;
 	console.log(dishes);
-	document.getElementById(`counter_${id}`).innerHTML = dishes[Number(id)];
+	document.getElementById(`counter_${id}`).innerHTML = dishes[+id];
 	Telegram.WebApp.MainButton.show();
 }
 
 
 function plus (id) {
-	dishes[Number(id)] += 1;
+	dishes[+id] += 1;
 	console.log(dishes);
-	document.getElementById(`counter_${id}`).innerHTML = dishes[Number(id)];
+	document.getElementById(`counter_${id}`).innerHTML = dishes[+id];
 }
 
 
 function minutes (id) {
-	dishes[Number(id)] -= 1;
+	dishes[+id] -= 1;
 
-	if (dishes[id] <= 0){
+	if (dishes[+id] <= 0){
 		document.getElementById(`buy_${id}`).style.display = 'inline-block';
 		document.getElementById(`sup_${id}`).style.display = 'none';
 	} else {
-		document.getElementById(`counter_${id}`).innerHTML = dishes[Number(id)];
+		document.getElementById(`counter_${id}`).innerHTML = dishes[+id];
 	}
 	console.log(dishes);
 }
