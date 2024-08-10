@@ -30,7 +30,7 @@ function minutes (id) {
 	if (dishes[id] <= 0){
 		document.getElementById(`buy_${id}`).style.display = 'inline-block';
 		document.getElementById(`sup_${id}`).style.display = 'none';
-		delete dishes[id]
+		dishes[id].remove()
 	} else {
 		document.getElementById(`counter_${id}`).innerHTML = dishes[id];
 	}
